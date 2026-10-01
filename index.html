@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Accounting Portfolio</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -33,7 +33,7 @@
       margin: 0 auto;
     }
 
-    /* Header with Headshot Styling */
+    /* Header & Headshot Styling */
     header {
       margin-bottom: 3rem;
       display: flex;
@@ -76,25 +76,28 @@
       display: inline-block;
     }
 
+    /* Skills Styling */
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.6rem;
       margin-top: 1rem;
     }
 
     .skill-tag {
       background: var(--card-bg);
       color: var(--accent);
-      padding: 0.4rem 0.8rem;
+      padding: 0.4rem 0.9rem;
       border-radius: 6px;
       font-size: 0.9rem;
+      font-weight: 500;
       border: 1px solid rgba(56, 189, 248, 0.2);
     }
 
+    /* Projects Grid Styling */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 1rem;
     }
@@ -104,7 +107,10 @@
       border-radius: 8px;
       padding: 1.5rem;
       transition: transform 0.2s, border-color 0.2s;
-      border: 1px solid transparent;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .project-card:hover {
@@ -114,12 +120,13 @@
 
     .project-card h3 {
       margin-bottom: 0.5rem;
+      color: var(--text);
     }
 
     .project-card p {
       color: var(--text-muted);
       font-size: 0.95rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
 
     .project-card a {
@@ -127,12 +134,14 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 0.9rem;
+      align-self: flex-start;
     }
 
     .project-card a:hover {
       text-decoration: underline;
     }
 
+    /* Contact Form Styling */
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -184,25 +193,31 @@
   <div class="container">
     <!-- Header Section with Headshot -->
     <header>
-      <img src="headshot.jpeg" alt="Your Name Headshot" class="headshot" />
+      <img src="headshot.jpeg" alt="Professional Headshot" class="headshot" />
       <div>
         <h1>Your Name</h1>
-        <p>Software Engineer & Developer</p>
+        <p>Accounting Student & Future CPA Candidate</p>
       </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
+    <!-- Personal Statement Section -->
+    <section id="statement">
+      <h2>Personal Statement</h2>
       <p>
-        Welcome to my portfolio! I am a passionate developer focused on building modern, efficient, and user-friendly applications. I love solving complex problems and continuously learning new technologies.
+        I am a motivated accounting student pursuing my CPA license upon graduation, with strong interests in audit, financial analysis, and strategic risk management.
       </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
       <div class="skills">
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML & CSS</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Microsoft Excel (PivotTables & Modeling)</span>
+        <span class="skill-tag">Attention to Detail</span>
+        <span class="skill-tag">Analytical Problem Solving</span>
+        <span class="skill-tag">Organizational Management</span>
+        <span class="skill-tag">Collaborative Teamwork</span>
+        <span class="skill-tag">Managerial Accounting</span>
       </div>
     </section>
 
@@ -210,15 +225,26 @@
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="projects-grid">
+        <!-- Project 1 -->
         <div class="project-card">
-          <h3>Project One</h3>
-          <p>A web application built to streamline daily task management and productivity workflows.</p>
-          <a href="#" target="_blank">View Project &rarr;</a>
+          <div>
+            <h3>Job Costing & Data Analysis</h3>
+            <p>
+              Analyzed job costing data using Excel formulas and PivotTables to evaluate costs, identify patterns, and generate insights from a company's accounting data. Applied managerial accounting concepts to transform raw data into meaningful information for strategic decision-making.
+            </p>
+          </div>
+          <a href="Data_Project_2026.pdf" target="_blank">View PDF Report &rarr;</a>
         </div>
+
+        <!-- Project 2 -->
         <div class="project-card">
-          <h3>Project Two</h3>
-          <p>An interactive data dashboard rendering real-time metrics and analytical insights.</p>
-          <a href="#" target="_blank">View Project &rarr;</a>
+          <div>
+            <h3>Rutgers Barnes & Noble Strategic Analysis</h3>
+            <p>
+              Analyzed Barnes & Noble's operational challenges at Rutgers University using primary interviews, surveys, and secondary research. Evaluated root causes and developed strategic recommendations to improve customer engagement, employee performance, and community integration.
+            </p>
+          </div>
+          <a href="T6_Final Paper.pdf" target="_blank">View Final Paper &rarr;</a>
         </div>
       </div>
     </section>
