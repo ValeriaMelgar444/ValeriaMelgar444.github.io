@@ -33,14 +33,28 @@
       margin: 0 auto;
     }
 
+    /* Header with Headshot Styling */
     header {
       margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      gap: 1.25rem;
+    }
+
+    .headshot {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
       color: var(--text);
     }
 
@@ -168,10 +182,13 @@
 <body>
 
   <div class="container">
-    <!-- Header Section -->
+    <!-- Header Section with Headshot -->
     <header>
-      <h1>Your Name</h1>
-      <p>Software Engineer & Developer</p>
+      <img src="headshot.jpeg" alt="Your Name Headshot" class="headshot" />
+      <div>
+        <h1>Your Name</h1>
+        <p>Software Engineer & Developer</p>
+      </div>
     </header>
 
     <!-- About Section -->
